@@ -1,0 +1,147 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #dadce1;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+input{
+
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.parent:before {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+}
+
+.block {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#reset, #reset:active, #reset:focus{
+  margin: 0 auto;
+  display: block;
+  border: solid 2px #dc9e02;
+  color: #dc9e02;
+  padding: 5px 10px;
+  font-size: 20px;
+  transition: all 0.5s; 
+  outline: 0;
+  position: relative;
+}
+
+#reset:hover {
+  background-color: #dc9e02;
+  color: white;
+  cursor: pointer;
+}
+
+#timer, #steps, .result{
+  margin: 5px
+}
+
+#game-info{
+  color: #dc9e02;
+  margin: 2px;
+  padding: 5px 10px;
+  font-size: 25px;
+}
+
+.result{
+  font-size: 40px;
+}
+
+#field-container{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+#field-container td {
+  width: 10vmin;
+  height: 10vmin;
+  border: solid 2px #dc9e02;
+  text-align: center;
+  font-size: 40px;
+  color: #dc9e02;
+  transition: all 0.5s; 
+}
+
+#field-container td:hover {
+  background-color: #dc9e02;
+  color: white;
+  cursor: pointer;
+}
+
+.result.hidden{
+  opacity: 0;
+}
+
+.result.visible{
+  opacity: 1;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity-block {
+  margin: auto;
+  font-size: 20px;
+}
+.quantity-arrow-minus,
+.quantity-arrow-plus,
+.quantity-num {
+  border: solid 2px #dc9e02;
+  background-color: transparent;
+  margin: 0px 0px 10px;
+  font-size: 16px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  outline: none;
+  color: #dc9e02;
+}
+.quantity-arrow-minus,
+.quantity-arrow-plus{
+  width: 30px;
+}
+.quantity-num{
+  width: 100px;
+  font-size: 24px;
+}
+.quantity-arrow-minus:hover,
+.quantity-arrow-plus:hover{
+  background-color: #dc9e02;
+  color: white;
+  cursor: pointer;
+}

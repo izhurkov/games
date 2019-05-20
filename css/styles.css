@@ -1,0 +1,121 @@
+/*
+background: dadce1
+text & border: dc9e02
+light blue: 747e92
+dark blue: 434e66
+*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: #dadce1;
+  color: #434e66;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  text-align: center;
+  color: #434e66;
+  margin: 20px 0px 0px;
+  /*margin: auto;*/
+}
+
+.grid {
+  padding: 20px;
+  margin: auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid li {
+  display: inline-block;
+  width: 350px;
+  margin: 10px;
+  text-align: left;
+  position: relative;
+  border: solid 5px #dc9e02;
+  border-radius: 10px;
+}
+
+.grid .container {
+  padding: 0px;
+  position: relative;
+  /*border: solid 5px #ed4e6e;*/
+  /*background: #2c3f52;*/
+  overflow: hidden;
+}
+
+.grid .container img {
+  width: 100%;
+  display: block;
+  position: relative;
+  transition: all .5s;
+  transform: scale(0.95);
+}
+
+.grid .title {
+  opacity: 0;
+  position: absolute;
+  background: #dadce1;
+  transition: bottom .6s, opacity .6s;
+  width: 100%;
+  top: auto;
+  bottom: -100%;
+}
+
+.grid .title h2 {
+  text-decoration: none;
+  margin: 10px 20px 10px;
+  color: #dc9e02;
+}
+
+.grid .title p{
+  font-size: 20px;
+  text-decoration: none;
+  margin: 2px 20px 15px;
+  color: #434e66;
+}
+
+
+.grid a {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    padding: 10px 10px 100px 10px;
+  }
+  .grid li {
+    width: 75%;
+  }
+
+  .grid .title {
+    position: relative;
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .grid .title a{
+    text-decoration: none;
+  }
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.container:hover .title{
+  opacity: 0.9;
+  bottom: 0px;
+}
+
+.container:hover img{
+  opacity: 0.8;
+  transform: scale(0.92);
+}
